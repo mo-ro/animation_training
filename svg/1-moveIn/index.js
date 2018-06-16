@@ -6,12 +6,12 @@ $(".button").on("click", function() {
 
   tl.set($animation, {
     attr: {
-      points: "90,30 1090,30 1090,30 90,30"
+      points: "90,30 890,30 890,30 90,30"
     },
   })
   .to($animation, .3, {
     attr: {
-      points: "90,30 1090,30 1090,400 90,450"
+      points: "90,30 890,30 890,300 90,350"
     },
     ease: Power2.easeOut,
     delay: .5
@@ -20,7 +20,7 @@ $(".button").on("click", function() {
 
 .to ($animation, .3, {
     attr: {
-      points: "90,30 1090,30 1090,700 90,550"
+      points: "90,30 890,30 890,570 90,450"
     },
     ease: Power2.easeInOut,
     onComplete: function(){
