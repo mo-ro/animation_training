@@ -55,8 +55,8 @@
   background-image: url(./moai.svg); }
 
 .back {
-  -webkit-transform: translateZ(-100px);
-          transform: translateZ(-100px);
+  -webkit-transform: translateZ(-100px) rotateY(180deg);
+          transform: translateZ(-100px) rotateY(180deg);
   background-image: url(./moai.svg); }
 
 .right {

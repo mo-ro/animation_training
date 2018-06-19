@@ -71,7 +71,7 @@
 }
 
 .back {
-  transform: translateZ(-100px);
+  transform: translateZ(-100px) rotateY(180deg);
   background-image: url(./moai.svg);
 }
 
