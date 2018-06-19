@@ -1,0 +1,100 @@
+.wrapper {
+  display: flex;
+  height: 600px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  -webkit-perspective: 500;
+}
+
+.name {
+  font-size: 48px;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin-bottom: 50px;
+  transform: translateZ(100px);
+
+  @media only screen and (max-width: 749px) {
+    font-size: 24px;
+  }
+}
+
+.cube {
+  width: 200px;
+  height: 200px;
+  transform-style:preserve-3d;
+  transition: .8s;
+  position: relative;
+
+
+  &-top, &-bottom {
+    width: 200px;
+    height: 10px;
+    position: absolute;
+  }
+
+  &-right, &-left {
+    width: 10px;
+    height: 200px;
+    position: absolute;
+  }
+
+  &-top {
+    top: -14px;
+  }
+
+  &-bottom {
+    bottom: -36px;
+  }
+
+  &-right {
+    right: -24px;
+  }
+
+  &-left {
+    left: -24px;
+  }
+}
+
+.front, .back, .right, .left, .top, .bottom {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #333;
+  position: absolute;
+  box-sizing: border-box;
+  background-size: contain;
+}
+
+.front {
+  transform: translateZ(100px);
+  background-image: url(./moai.svg);
+}
+
+.back {
+  transform: translateZ(-100px);
+  background-image: url(./moai.svg);
+}
+
+.right {
+  transform: rotateY(90deg);
+  left: 100px;
+  background-image: url(./moai-metal.png);
+}
+
+.left {
+  transform: rotateY(-90deg);
+  right: 100px;
+  background-image: url(./moai-abs.svg);
+}
+
+.top {
+  transform: rotateX(90deg);
+  bottom: 100px;
+  background-image: url(./moai-soft.svg);
+}
+
+.bottom {
+  transform: rotateX(-90deg);
+  top: 100px;
+  background-image: url(./moai-ragh.png);
+}

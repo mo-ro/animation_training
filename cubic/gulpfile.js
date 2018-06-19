@@ -4,24 +4,24 @@ var autoprefixer = require("gulp-autoprefixer");
 var browser = require("browser-sync");
 var plumber = require("gulp-plumber");
 
-gulp.task("html", function() {
-  gulp.src("**/*.html")
-    .pipe(browser.reload({stream:true}))
-});
+// gulp.task("html", function() {
+//   gulp.src(["**/*.html", "!**/node_modules/**/*.scss"])
+//     // .pipe(browser.reload({stream:true}))
+// });
 
 gulp.task("sass", function() {
-  gulp.src("**/*.scss")
+  gulp.src(["**/*.scss", "!**/node_modules/**/*.scss"])
     .pipe(plumber())
     .pipe(sass())
     .pipe(autoprefixer())
     .pipe(gulp.dest("."))
-    .pipe(browser.reload({stream:true}))
+    // .pipe(browser.reload({stream:true}))
 });
 
-gulp.task("js", function() {
-  gulp.src("**/*.js")
-    .pipe(browser.reload({stream:true}))
-});
+// gulp.task("js", function() {
+//   gulp.src("**/*.js")
+//     // .pipe(browser.reload({stream:true}))
+// });
 
 gulp.task("server", function() {
   browser({
@@ -32,7 +32,7 @@ gulp.task("server", function() {
 });
 
 gulp.task("default",['server'], function() {
-  gulp.watch("**/*.html",["html"]);
-  gulp.watch("**/*.js",["js"]);
+  // gulp.watch("**/*.html",["html"]);
+  // gulp.watch("**/*.js",["js"]);
   gulp.watch("**/*.scss",["sass"]);
 });
