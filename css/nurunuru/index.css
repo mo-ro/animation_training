@@ -1,0 +1,191 @@
+html, body {
+  margin: 0; }
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 100px;
+  box-sizing: border-box;
+  overflow: hidden;
+  -webkit-animation: color 5s infinite alternate linear;
+          animation: color 5s infinite alternate linear; }
+
+.planets {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 180%;
+  min-height: 680px;
+  -webkit-transform-origin: 90px 50%;
+          transform-origin: 90px 50%;
+  -webkit-animation: rotate 10s infinite linear;
+          animation: rotate 10s infinite linear; }
+
+.sun {
+  width: 180px;
+  height: 180px;
+  box-sizing: border-box;
+  border-radius: 100px;
+  border: 6px solid #8A4B08;
+  background-color: #FFBF00;
+  position: relative; }
+
+.eye {
+  width: 24px;
+  height: 24px;
+  background-color: #8A4B08;
+  border-radius: 15px;
+  position: absolute;
+  top: 68px; }
+  .eye-right {
+    right: 36px; }
+  .eye-left {
+    left: 36px; }
+
+.sunbeams {
+  width: 340px;
+  height: 340px;
+  right: -86px;
+  top: -86px;
+  position: absolute;
+  -webkit-animation: rotate 5s infinite linear;
+          animation: rotate 5s infinite linear; }
+
+.beam {
+  width: 8px;
+  height: 40px;
+  background-color: #8A4B08;
+  position: absolute;
+  left: 166px;
+  top: 24px;
+  -webkit-transform-origin: 4px 146px;
+          transform-origin: 4px 146px; }
+  .beam:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  .beam:nth-child(2) {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg); }
+  .beam:nth-child(3) {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg); }
+  .beam:nth-child(4) {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  .beam:nth-child(5) {
+    -webkit-transform: rotate(225deg);
+            transform: rotate(225deg); }
+  .beam:nth-child(6) {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg); }
+  .beam:nth-child(7) {
+    -webkit-transform: rotate(315deg);
+            transform: rotate(315deg); }
+  .beam:nth-child(8) {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); }
+
+.moon {
+  width: 180px;
+  height: 180px;
+  box-sizing: border-box;
+  border-radius: 100px;
+  border: 6px solid #81BEF7;
+  background-color: #A9D0F5;
+  position: relative;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+.ground {
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  bottom: 0;
+  background-color: #FFBF00;
+  border-top: 6px solid #8A4B08;
+  -webkit-animation: color 5s infinite alternate linear;
+          animation: color 5s infinite alternate linear; }
+
+.moai {
+  width: 170px;
+  position: absolute;
+  transition: .3s;
+  top: -50px; }
+
+#moai {
+  visibility: hidden;
+  position: absolute; }
+  #moai:checked ~ .button::after {
+    display: none; }
+  #moai:checked ~ .button::before {
+    display: block; }
+  #moai:checked + .moai {
+    top: -300px; }
+    @media screen and (max-width: 768px) {
+      #moai:checked + .moai {
+        top: -240px; } }
+
+.button {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  width: 180px;
+  height: 50px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 4px solid #8A4B08;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #8A4B08;
+  font-weight: bold; }
+  .button::after {
+    display: block;
+    position: absolute;
+    content: "up!";
+    font-size: 30px; }
+  .button::before {
+    display: none;
+    position: absolute;
+    content: "down";
+    font-size: 30px; }
+
+.moai-label {
+  position: absolute;
+  bottom: 80px;
+  height: 50px; }
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@-webkit-keyframes color {
+  from {
+    background-color: #FFBF00;
+    border-color: #8A4B08; }
+  to {
+    background-color: #81BEF7;
+    border-color: #A9D0F5; } }
+
+@keyframes color {
+  from {
+    background-color: #FFBF00;
+    border-color: #8A4B08; }
+  to {
+    background-color: #81BEF7;
+    border-color: #A9D0F5; } }

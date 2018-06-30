@@ -12,8 +12,6 @@ gulp.task('html', function() {
   .pipe(plumber({
     errorHandler: notify.onError("Error: <%= error.message %>")
   }))
-  .pipe(gulp.dest('./dist'))
-  .pipe(gulp.dest('./dev'))
   .pipe(browser.reload({
     stream: true
   }))
@@ -22,31 +20,18 @@ gulp.task('html', function() {
 
 
 gulp.task("sass", function() {
-  gulp.src("./dev/src/style/**/*.scss")
+  gulp.src(["./*.scss", "!./node_modules/*"])
     .pipe(plumber({
       errorHandler: notify.onError("Error: <%= error.message %>")
     }))
     .pipe(sass())
     .pipe(autoprefixer())
-    .pipe(gulp.dest("./dist/style"))
-    .pipe(gulp.dest("./dev/style"))
+    .pipe(gulp.dest("."))
     .pipe(browser.reload({
       stream: true
     }))
 });
 
-gulp.task("img", function() {
-  gulp.src("./dev/src/img/**/*.pmg", "./dev/src/img/**/*.jpg")
-    .pipe(plumber({
-      errorHandler: notify.onError("Error: <%= error.message %>")
-    }))
-    .pipe(sass())
-    .pipe(autoprefixer())
-    .pipe(gulp.dest("./dist/img"))
-    .pipe(browser.reload({
-      stream: true
-    }))
-});
 
 // gulp.task("default", function() {
 //   gulp.watch(["./"], ["js"]);
@@ -58,18 +43,16 @@ gulp.task("img", function() {
 gulp.task("server", function() {
   browser({
     server: {
-      baseDir: "./dev"
+      baseDir: "./"
     }
   });
 });
 gulp.task("js", function() {
-  gulp.src(["./dev/src/js/**/*js", "!js/min/**/*.js"])
+  gulp.src(["./**/*.js", "!./node_modules/"])
   .pipe(plumber({
     errorHandler: notify.onError("Error: <%= error.message %>")
   }))
     // .pipe(uglify())
-    .pipe(gulp.dest("./dev/js"))
-    .pipe(gulp.dest("./dist/js"))
     .pipe(browser.reload({
       stream: true
     }))
@@ -78,7 +61,7 @@ gulp.task("js", function() {
 
 
 gulp.task("default", ['server'], function() {
-  gulp.watch(["./dev/src/js/**/*.js"], ["js"]);
-  gulp.watch("./dev/src/style/**/*.scss", ["sass"]);
-  gulp.watch("./dev/src/**/*.html", ["html"]);
+    gulp.watch(["./**/*.js", "!./node_modules/"], ["js"]);
+  gulp.watch(["./**/*.scss", "!./node_modules/"], ["sass"]);
+  gulp.watch(["./**/*.html", "!./node_modules/"], ["html"]);
 });
