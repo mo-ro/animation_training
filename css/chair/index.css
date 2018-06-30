@@ -7,14 +7,18 @@ body, heml {
   height: 100vh;
   position: relative;
   overflow: hidden;
-  background-color: #81BEF7; }
+  background-color: #81BEF7;
+  -webkit-animation: bigger 10s infinite linear;
+          animation: bigger 10s infinite linear; }
 
 .trains {
   display: flex;
   position: absolute;
-  left: 80%;
+  left: 100%;
   bottom: 30%;
-  height: 225px; }
+  height: 225px;
+  -webkit-animation: train 10s infinite linear;
+          animation: train 10s infinite linear; }
 
 .train {
   width: 460px;
@@ -175,4 +179,252 @@ body, heml {
   height: 30%;
   bottom: 0;
   position: absolute;
-  background-color: #084B8A; }
+  background-color: #0B2161; }
+
+.linear {
+  width: 70%;
+  height: 6px;
+  border-radius: 10px;
+  position: absolute;
+  background-color: rgba(217, 222, 72, 0.4);
+  left: -100%; }
+  .linear1 {
+    top: calc(100% / 16 * 1);
+    -webkit-animation-name: line;
+            animation-name: line;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s; }
+  .linear2 {
+    top: calc(100% / 16 * 2);
+    -webkit-animation-name: line;
+            animation-name: line;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s; }
+  .linear3 {
+    top: calc(100% / 16 * 3);
+    -webkit-animation-name: line;
+            animation-name: line;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s; }
+  .linear4 {
+    top: calc(100% / 16 * 4);
+    -webkit-animation-name: line;
+            animation-name: line;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s; }
+  .linear5 {
+    top: calc(100% / 16 * 5);
+    -webkit-animation-name: line;
+            animation-name: line;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s; }
+  .linear6 {
+    top: calc(100% / 16 * 6);
+    -webkit-animation-name: line;
+            animation-name: line;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: 6s;
+            animation-delay: 6s; }
+  .linear7 {
+    top: calc(100% / 16 * 7);
+    -webkit-animation-name: line;
+            animation-name: line;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s; }
+  .linear8 {
+    top: calc(100% / 16 * 8);
+    -webkit-animation-name: line;
+            animation-name: line;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s; }
+  .linear9 {
+    top: calc(100% / 16 * 9);
+    -webkit-animation-name: line;
+            animation-name: line;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s; }
+  .linear10 {
+    top: calc(100% / 16 * 10);
+    -webkit-animation-name: line;
+            animation-name: line;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s; }
+  .linear11 {
+    top: calc(100% / 16 * 11);
+    -webkit-animation-name: line;
+            animation-name: line;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s; }
+  .linear12 {
+    top: calc(100% / 16 * 12);
+    -webkit-animation-name: line;
+            animation-name: line;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s; }
+  .linear13 {
+    top: calc(100% / 16 * 13);
+    -webkit-animation-name: line;
+            animation-name: line;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s; }
+  .linear14 {
+    top: calc(100% / 16 * 14);
+    -webkit-animation-name: line;
+            animation-name: line;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: 6s;
+            animation-delay: 6s; }
+  .linear15 {
+    top: calc(100% / 16 * 15);
+    -webkit-animation-name: line;
+            animation-name: line;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s; }
+  .linear16 {
+    top: calc(100% / 16 * 16);
+    -webkit-animation-name: line;
+            animation-name: line;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s; }
+
+@-webkit-keyframes line {
+  from {
+    left: -100%; }
+  to {
+    left: 100%; } }
+
+@keyframes line {
+  from {
+    left: -100%; }
+  to {
+    left: 100%; } }
+
+@-webkit-keyframes train {
+  10% {
+    left: 100%; }
+  20% {
+    left: 40%; }
+  60% {
+    left: 50%; }
+  100% {
+    left: -2500px; } }
+
+@keyframes train {
+  10% {
+    left: 100%; }
+  20% {
+    left: 40%; }
+  60% {
+    left: 50%; }
+  100% {
+    left: -2500px; } }
+
+@-webkit-keyframes bigger {
+  60% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  100% {
+    -webkit-transform: scale(3);
+            transform: scale(3); } }
+
+@keyframes bigger {
+  60% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  100% {
+    -webkit-transform: scale(3);
+            transform: scale(3); } }

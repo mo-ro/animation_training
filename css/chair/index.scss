@@ -1,5 +1,6 @@
 $color: #B45F04;
 $border: rgba(0, 0, 0, .7);
+$height: 1vh;
 
 body, heml {
   margin: 0;
@@ -12,14 +13,16 @@ body, heml {
   position: relative;
   overflow: hidden;
   background-color: #81BEF7;
+  animation: bigger 10s infinite linear;
 }
 
 .trains {
   display: flex;
   position: absolute;
-  left: 80%;
+  left: 100%;
   bottom: 30%;
   height: 225px;
+  animation: train 10s infinite linear;
 }
 
 .train {
@@ -222,5 +225,61 @@ body, heml {
   height: 30%;
   bottom: 0;
   position: absolute;
-  background-color: #084B8A;
+  background-color: #0B2161;
+}
+
+.linear {
+  width: 70%;
+  height: 6px;
+  border-radius: 10px;
+  position: absolute;
+  background-color: rgba(217, 222, 72, .4);
+  left: -100%;
+
+  @for $i from 1 through 16 {
+    &#{$i} {
+      $rand: random(3);
+      $rand2 : random(6);
+      $time: calc(#{random(10)} / 5);
+      top: calc(100% / 16 * #{$i});
+      animation-name: line;
+      animation-duration: $rand + s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-delay: $rand2 + s;
+    }
+  }
+}
+
+@keyframes line {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes train {
+  10% {
+    left: 100%;
+  }
+  20% {
+    left: 40%;
+  }
+  60% {
+    left: 50%;
+  }
+  100% {
+    left: -2500px;
+  }
+}
+
+@keyframes bigger {
+  60% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(3);
+  }
 }
