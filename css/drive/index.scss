@@ -1,0 +1,17 @@
+$black: #161a19;
+
+@import "./crowd";
+
+body, heml {
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  animation: bigger 10s infinite linear;
+}
