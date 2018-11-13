@@ -1,5 +1,5 @@
 {
-  "name": "1-movein",
+  "name": "animation",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,12 +9,16 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.24.4",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-sass": "^4.0.1"
-  },
-  "dependencies": {
-    "gulp-plumber": "^1.2.0"
+    "gulp": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-autoprefixer": "*",
+    "es6-promise": "*",
+    "gulp-csscomb": "*",
+    "gulp-merge-media-queries": "*",
+    "gulp-clean-css": "*",
+    "gulp-uglify": "*",
+    "browser-sync": "*"
   }
 }
