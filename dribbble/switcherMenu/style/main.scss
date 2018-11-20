@@ -2,7 +2,7 @@
   align-items: center;
   background: #eee;
   display: flex;
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: "Libre Franklin", sans-serif;
   font-weight: 300;
   height: 100vh;
   justify-content: center;
@@ -21,13 +21,13 @@
 
   > .arrow {
     height: 30px;
-    opacity: .3;
+    opacity: 0.3;
     position: absolute;
     top: 50%;
     transform: translate(110px, -50%);
     width: 30px;
 
-    > .left, 
+    > .left,
     > .right {
       background: #5a5a5a;
       border-radius: 10px;
@@ -70,8 +70,6 @@
   }
 }
 
-
-
 .select-list {
   align-items: center;
   display: flex;
@@ -83,6 +81,7 @@
 
   > .item {
     font-size: 22px;
+    // opacity: 0;
     position: absolute;
     transform-origin: -30px center;
 
@@ -109,6 +108,6 @@
   }
 
   a {
-    color: #3a8bbb
+    color: #3a8bbb;
   }
 }
