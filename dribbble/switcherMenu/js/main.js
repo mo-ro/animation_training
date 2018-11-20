@@ -41,7 +41,7 @@ $(".select-box").on("mouseup", function(event) {
   );
 
   TweenMax.fromTo(
-    $(".-item-" + ((counter % 4) - 1)),
+    $(".-item-" + ((counter - 1) % 4)),
     0.45,
     {
       opacity: 1
