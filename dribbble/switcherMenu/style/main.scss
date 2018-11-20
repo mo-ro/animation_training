@@ -1,0 +1,47 @@
+.container {
+  align-items: center;
+  background: #eee;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+.select-box {
+  background: #f6f6f6;
+  border-radius: 300px;
+  box-shadow: 0px 4px 18px rgba(#5a5a5a, 0.1);
+  height: 68px;
+  width: 150px;
+
+  > .inner {
+    height: 100%;
+    // overflow: hidden;
+    width: 100%;
+    // transform: rotate(45deg);
+    // transform-origin: center;
+  }
+}
+
+.select-list {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  left: 22px;
+  position: relative;
+  transform: rotate(90deg);
+  transform-origin: -30px center;
+  width: 100%;
+
+  > .item {
+    font-size: 22px;
+    position: absolute;
+    transform-origin: -30px center;
+
+    @for $i from 0 through 4 {
+      &.-item-#{$i} {
+        transform: rotate(#{$i * -90}deg);
+      }
+    }
+  }
+}
